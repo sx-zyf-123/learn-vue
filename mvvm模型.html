@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>初始vue</title>
+    <script type="text/javascript" src = "./js/vue.js"></script>
+</head>
+<body>
+
+    <div id = "root">
+        <h1>学校名称：{{name}}</h1>
+        <h1>学校地址：{{address}}</h1>
+    </div>
+
+
+    <script type="text/javascript">
+        Vue.config.productionTip = false 
+
+    
+        const vm = new Vue({
+
+            el: '.root',
+            data: {
+                name:'张三',
+                address:"北京"
+            }
+        })
+        console.log(vm)
+    </script>
+</html>
+
+<!-- 
+    MVVM模型：
+        1.M 模型model  ： 对应data中的数据
+        2.V 视图view  : 模板
+        3.VM   试图模型 ViewModel：  Vue 实例对象
+
+    观察发现：
+        1.data中所有的属性，最后都出现在了vm身上。
+        2.vm身上所有的属性及vue原型上所有的属性，在vue模板中都可以直接使用
+ -->

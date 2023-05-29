@@ -4777,7 +4777,6 @@
       }
       return modified;
   }
-
   function FunctionalRenderContext(data, props, children, parent, Ctor) {
       var _this = this;
       var options = Ctor.options;
